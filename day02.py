@@ -39,20 +39,52 @@
 # }
 
 # Python, By Professor
-n = int(input("Input number : "))
-is_prime = True
-if n >= 2:
-    #for i in range(2, n):
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            is_prime = False  #count = count + 1
-            break
-        print(i, end=' ')
-else:
-    is_prime = False
+# n = int(input("Input number : "))
+# is_prime = True
+# if n >= 2:
+#     #for i in range(2, n):
+#     for i in range(2, int(n**0.5)+1):
+#         if n % i == 0:
+#             is_prime = False  #count = count + 1
+#             break
+#         print(i, end=' ')
+# else:
+#     is_prime = False
+#
+# #if count == 0:
+# if is_prime:
+#     print(f"{n} is prime number")
+# else:
+#     print(f"{n} is NOT prime number!")
 
-#if count == 0:
-if is_prime:
+
+
+def is_prime(num) -> bool:
+    """
+    소수 여부를 판정. 소수면 TRUE를, 소수가 아니면 False를 리턴하는 함수
+    :param num: integer number
+    :return: boolean type
+    """
+    # 작은 따옴표나 큰 따옴표 3개 치면 위와 같은 설명 쓸 수 있음
+
+    if num >= 2:
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+                # is_prime = False
+                # break
+            # print(i, end=' ')
+    else:
+        return False
+    return True
+
+
+# main
+# help(abs)
+help(is_prime)
+n = int(input("Input number : "))
+
+if is_prime(n):  # function call
     print(f"{n} is prime number")
 else:
     print(f"{n} is NOT prime number!")
