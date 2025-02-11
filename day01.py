@@ -1,2 +1,2 @@
 name = input ("Ur name ?")
-print(f"hi {name}") #alt+shift+f10
+print(f"hi {name}") #실행 단축키: alt+shift+f10
