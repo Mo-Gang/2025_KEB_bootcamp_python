@@ -67,15 +67,25 @@ def is_prime(num) -> bool:
     """
     # 작은 따옴표나 큰 따옴표 3개 치면 위와 같은 설명 쓸 수 있음
 
-    if num >= 2:
-        for i in range(2, int(num ** 0.5) + 1):
-            if num % i == 0:
-                return False
-                # is_prime = False
-                # break
-            # print(i, end=' ')
-    else:
+    # if num >= 2:
+    #     for i in range(2, int(num ** 0.5) + 1):
+    #         if num % i == 0:
+    #             return False
+    #             # is_prime = False
+    #             # break
+    #         # print(i, end=' ')
+    # else:
+    #     return False
+    # return True
+
+    # for을 while로 교체하면,
+    if num < 2:
         return False
+    i = 2
+    while i <= int(num ** 0.5):
+        if num % i == 0:
+            return False
+        i += 1
     return True
 
 
