@@ -1,4 +1,4 @@
-# day03 Assignment4
+# day03 Assignment5
 # while 안쪽의 조건문을 줄이세요.
 
 import random
